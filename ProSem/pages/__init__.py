@@ -1,3 +1,4 @@
-from .dashboard import dashboard
+from .reservas import reservas
 from .index import index
-from .settings import settings
+from .inventario import inventario
+from .proyecto import proyecto

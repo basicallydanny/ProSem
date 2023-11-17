@@ -68,36 +68,44 @@ export default function Component() {
   <Box sx={{"display": ["none", "none", "block"], "minWidth": "20em", "height": "100%", "position": "sticky", "top": "0px", "borderRight": "1px solid #F4F3F6"}}>
   <VStack sx={{"height": "100dvh"}}>
   <HStack sx={{"width": "100%", "borderBottom": "1px solid #F4F3F6", "padding": "1em"}}>
-  <Image src={`/icon.png`} sx={{"height": "2em"}}/>
+  <Image src={`/icon.png`} sx={{"width": "150px", "height": "2em"}}/>
   <Spacer/>
   <Link as={NextLink} href={`https://mg-local.servicios.javerianacali.edu.co/`}>
   <Center sx={{"boxShadow": "0px 0px 0px 1px rgba(84, 82, 95, 0.14)", "bg": "transparent", "borderRadius": "0.375rem", "_hover": {"bg": "#F5EFFE"}}}>
-  <Image src={`/icon.png`} sx={{"height": "3em", "padding": "0.5em"}}/>
+  <Image src={`/favicon.ico`} sx={{"height": "3em", "padding": "0.5em"}}/>
 </Center>
 </Link>
 </HStack>
   <VStack alignItems={`flex-start`} sx={{"width": "100%", "overflowY": "auto", "padding": "1em"}}>
-  <Link as={NextLink} href={`/`} sx={{"width": "100%"}}>
-  <HStack sx={{"bg": isTrue((state.router.page.path === "/home") || (((state.router.page.path === "/") && "Home") === "Home")) ? `#F5EFFE` : `transparent`, "color": isTrue((state.router.page.path === "/home") || (((state.router.page.path === "/") && "Home") === "Home")) ? `#1A1060` : `black`, "borderRadius": "0.375rem", "boxShadow": "0px 0px 0px 1px rgba(84, 82, 95, 0.14)", "width": "100%", "paddingX": "1em"}}>
-  <Image src={`/github.svg`} sx={{"height": "2.5em", "padding": "0.5em"}}/>
+  <Link as={NextLink} href={`/index`} sx={{"width": "100%"}}>
+  <HStack sx={{"bg": isTrue((state.router.page.path === "/menu") || (((state.router.page.path === "/") && "Menu") === "Menu")) ? `#F5EFFE` : `transparent`, "color": isTrue((state.router.page.path === "/menu") || (((state.router.page.path === "/") && "Menu") === "Menu")) ? `#1A1060` : `black`, "borderRadius": "0.375rem", "boxShadow": "0px 0px 0px 1px rgba(84, 82, 95, 0.14)", "width": "100%", "paddingX": "1em"}}>
+  <Image src={`/index.png`} sx={{"height": "2.5em", "padding": "0.5em"}}/>
   <Text>
-  {`Home`}
+  {`Menu`}
 </Text>
 </HStack>
 </Link>
-  <Link as={NextLink} href={`/dashboard`} sx={{"width": "100%"}}>
-  <HStack sx={{"bg": isTrue((state.router.page.path === "/dashboard") || (((state.router.page.path === "/") && "Dashboard") === "Home")) ? `#F5EFFE` : `transparent`, "color": isTrue((state.router.page.path === "/dashboard") || (((state.router.page.path === "/") && "Dashboard") === "Home")) ? `#1A1060` : `black`, "borderRadius": "0.375rem", "boxShadow": "0px 0px 0px 1px rgba(84, 82, 95, 0.14)", "width": "100%", "paddingX": "1em"}}>
-  <Image src={`/github.svg`} sx={{"height": "2.5em", "padding": "0.5em"}}/>
+  <Link as={NextLink} href={`/inventario`} sx={{"width": "100%"}}>
+  <HStack sx={{"bg": isTrue((state.router.page.path === "/inventario") || (((state.router.page.path === "/") && "Inventario") === "Menu")) ? `#F5EFFE` : `transparent`, "color": isTrue((state.router.page.path === "/inventario") || (((state.router.page.path === "/") && "Inventario") === "Menu")) ? `#1A1060` : `black`, "borderRadius": "0.375rem", "boxShadow": "0px 0px 0px 1px rgba(84, 82, 95, 0.14)", "width": "100%", "paddingX": "1em"}}>
+  <Image src={`/inventario.png`} sx={{"height": "2.5em", "padding": "0.5em"}}/>
   <Text>
-  {`Dashboard`}
+  {`Inventario`}
 </Text>
 </HStack>
 </Link>
-  <Link as={NextLink} href={`/settings`} sx={{"width": "100%"}}>
-  <HStack sx={{"bg": isTrue((state.router.page.path === "/settings") || (((state.router.page.path === "/") && "Settings") === "Home")) ? `#F5EFFE` : `transparent`, "color": isTrue((state.router.page.path === "/settings") || (((state.router.page.path === "/") && "Settings") === "Home")) ? `#1A1060` : `black`, "borderRadius": "0.375rem", "boxShadow": "0px 0px 0px 1px rgba(84, 82, 95, 0.14)", "width": "100%", "paddingX": "1em"}}>
-  <Image src={`/github.svg`} sx={{"height": "2.5em", "padding": "0.5em"}}/>
+  <Link as={NextLink} href={`/proyecto`} sx={{"width": "100%"}}>
+  <HStack sx={{"bg": isTrue((state.router.page.path === "/proyecto") || (((state.router.page.path === "/") && "Proyecto") === "Menu")) ? `#F5EFFE` : `transparent`, "color": isTrue((state.router.page.path === "/proyecto") || (((state.router.page.path === "/") && "Proyecto") === "Menu")) ? `#1A1060` : `black`, "borderRadius": "0.375rem", "boxShadow": "0px 0px 0px 1px rgba(84, 82, 95, 0.14)", "width": "100%", "paddingX": "1em"}}>
+  <Image src={`/proyecto.png`} sx={{"height": "2.5em", "padding": "0.5em"}}/>
   <Text>
-  {`Settings`}
+  {`Proyecto`}
+</Text>
+</HStack>
+</Link>
+  <Link as={NextLink} href={`/reservas`} sx={{"width": "100%"}}>
+  <HStack sx={{"bg": isTrue((state.router.page.path === "/reservas") || (((state.router.page.path === "/") && "Reservas") === "Menu")) ? `#F5EFFE` : `transparent`, "color": isTrue((state.router.page.path === "/reservas") || (((state.router.page.path === "/") && "Reservas") === "Menu")) ? `#1A1060` : `black`, "borderRadius": "0.375rem", "boxShadow": "0px 0px 0px 1px rgba(84, 82, 95, 0.14)", "width": "100%", "paddingX": "1em"}}>
+  <Image src={`/reservas.png`} sx={{"height": "2.5em", "padding": "0.5em"}}/>
+  <Text>
+  {`Reservas`}
 </Text>
 </HStack>
 </Link>
@@ -109,10 +117,10 @@ export default function Component() {
   <Box sx={{"width": "100%", "alignItems": "flex-start", "boxShadow": "0px 0px 0px 1px rgba(84, 82, 95, 0.14)", "borderRadius": "0.375rem", "padding": "1em", "marginBottom": "2em"}}>
   <VStack>
   <Heading sx={{"fontSize": "3em"}}>
-  {`Settings`}
+  {`Resevas`}
 </Heading>
   <Text>
-  {`Reflex`}
+  {`Welcome`}
 </Text>
 </VStack>
 </Box>
@@ -125,18 +133,23 @@ export default function Component() {
 </MenuButton>
   <MenuList>
   <MenuItem sx={{"_hover": {"bg": "#F5EFFE"}}}>
-  <Link as={NextLink} href={`/`} sx={{"width": "100%"}}>
-  {`Home`}
+  <Link as={NextLink} href={`/index`} sx={{"width": "100%"}}>
+  {`Menu`}
 </Link>
 </MenuItem>
   <MenuItem sx={{"_hover": {"bg": "#F5EFFE"}}}>
-  <Link as={NextLink} href={`/dashboard`} sx={{"width": "100%"}}>
-  {`Dashboard`}
+  <Link as={NextLink} href={`/inventario`} sx={{"width": "100%"}}>
+  {`Inventario`}
 </Link>
 </MenuItem>
   <MenuItem sx={{"_hover": {"bg": "#F5EFFE"}}}>
-  <Link as={NextLink} href={`/settings`} sx={{"width": "100%"}}>
-  {`Settings`}
+  <Link as={NextLink} href={`/proyecto`} sx={{"width": "100%"}}>
+  {`Proyecto`}
+</Link>
+</MenuItem>
+  <MenuItem sx={{"_hover": {"bg": "#F5EFFE"}}}>
+  <Link as={NextLink} href={`/reservas`} sx={{"width": "100%"}}>
+  {`Reservas`}
 </Link>
 </MenuItem>
   <MenuDivider/>
@@ -151,7 +164,7 @@ export default function Component() {
 </HStack>
   <NextHead>
   <title>
-  {`Settings`}
+  {`Reservas`}
 </title>
   <meta content={`A Reflex app.`} name={`description`}/>
   <meta content={`favicon.ico`} property={`og:image`}/>

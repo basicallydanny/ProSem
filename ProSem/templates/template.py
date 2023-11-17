@@ -1,7 +1,8 @@
 from __future__ import annotations
-
 from ProSem import styles
 from ProSem.components.sidebar import sidebar
+from ProSem.components.stacks import stacks
+from ProSem.components.stacks import stacks2
 from typing import Callable
 
 import reflex as rx

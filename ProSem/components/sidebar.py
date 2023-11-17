@@ -1,21 +1,16 @@
-"""Sidebar component for the app."""
-
 from ProSem import styles
 from ProSem.state import State
-
 import reflex as rx
 
 def sidebar_header() -> rx.Component:
     return rx.hstack(
         rx.image(
-            src="/icon.png",
-            height="2em",
-        ),
+            src="/icon.png", width="150px", height="2em"),
         rx.spacer(),
         rx.link(
             rx.center(
                 rx.image(
-                    src="/icon.png",
+                    src="/favicon.ico",
                     height="3em",
                     padding="0.5em",
                 ),
@@ -35,9 +30,7 @@ def sidebar_header() -> rx.Component:
 
 def sidebar_item(text: str, icon: str, url: str) -> rx.Component:
     active = (State.router.page.path == f"/{text.lower()}") | (
-        (State.router.page.path == "/") & text == "Home"
-    )
-
+        (State.router.page.path == "/") & text == "Menu")
     return rx.link(
         rx.hstack(
             rx.image(
@@ -67,10 +60,8 @@ def sidebar_item(text: str, icon: str, url: str) -> rx.Component:
         width="100%",
     )
 
-
 def sidebar() -> rx.Component:
     from reflex.page import get_decorated_pages
-
     return rx.box(
         rx.vstack(
             sidebar_header(),
@@ -78,7 +69,7 @@ def sidebar() -> rx.Component:
                 *[
                     sidebar_item(
                         text=page.get("title", page["route"].strip("/").capitalize()),
-                        icon=page.get("image", "/github.svg"),
+                        icon=page["route"] + ".png",
                         url=page["route"],
                     )
                     for page in get_decorated_pages()
@@ -98,3 +89,5 @@ def sidebar() -> rx.Component:
         top="0px",
         border_right=styles.border,
     )
+
+

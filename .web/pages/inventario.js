@@ -3,7 +3,7 @@ import { useRouter } from "next/router"
 import { Event, getAllLocalStorageItems, getRefValue, getRefValues, isTrue, preventDefault, refs, spreadArraysOrObjects, uploadFiles, useEventLoop } from "/utils/state"
 import { ColorModeContext, EventLoopContext, initialEvents, StateContext } from "/utils/context.js"
 import "focus-visible/dist/focus-visible"
-import { Box, Center, Heading, HStack, Image, Link, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Spacer, Text, VStack } from "@chakra-ui/react"
+import { Avatar, Box, Button, Center, CircularProgress, CircularProgressLabel, Heading, HStack, Image, Link, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Spacer, Stack, Text, VStack } from "@chakra-ui/react"
 import { getEventURL } from "/utils/state.js"
 import NextLink from "next/link"
 import { HamburgerIcon } from "@chakra-ui/icons"
@@ -116,12 +116,70 @@ export default function Component() {
   <Box sx={{"paddingTop": "5em", "paddingX": ["auto", "2em"]}}>
   <Box sx={{"width": "100%", "alignItems": "flex-start", "boxShadow": "0px 0px 0px 1px rgba(84, 82, 95, 0.14)", "borderRadius": "0.375rem", "padding": "1em", "marginBottom": "2em"}}>
   <VStack>
-  <Heading sx={{"fontSize": "3em"}}>
-  {`Dashboard`}
+  <Heading sx={{"margin-bottom": "30px", "fontSize": "3em"}}>
+  {`Inventario`}
 </Heading>
-  <Text>
-  {`Welcome`}
+  <VStack sx={{"border-radius": "xl", "width": "100%", "padding": "60px", "background-color": "#f5f5f5", "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.1)"}}>
+  <HStack>
+  <Heading size={`xl`} sx={{"margin-right": "40px", "color": "#4682B4"}}>
+  {`ID 01`}
+</Heading>
+  <Image src={`/robot.png`} sx={{"width": "100px", "height": "auto"}}/>
+  <Stack direction={`column`} sx={{"margin-right": "50px"}}>
+  <Text sx={{"size": "0.2em", "color": "#808080"}}>
+  {`Bateria`}
 </Text>
+  <Box>
+  <CircularProgress color={`red`} value={5}>
+  <CircularProgressLabel sx={{"color": "red"}}>
+  {`5%`}
+</CircularProgressLabel>
+</CircularProgress>
+</Box>
+</Stack>
+  <Stack direction={`column`}>
+  <Text sx={{"size": "0.2em", "color": "#808080"}}>
+  {`Distancia Total`}
+</Text>
+  <Text as={`b`} sx={{"size": "10px"}}>
+  {`3 km`}
+</Text>
+</Stack>
+</HStack>
+  <HStack>
+  <Stack direction={`column`} sx={{"margin-left": "210px"}}>
+  <Text sx={{"size": "0.2em", "color": "#808080"}}>
+  {`Estado`}
+</Text>
+  <Box>
+  <CircularProgress color={`green`} isIndeterminate={true}>
+  <CircularProgressLabel sx={{"color": "green"}}>
+  {`libre`}
+</CircularProgressLabel>
+</CircularProgress>
+</Box>
+</Stack>
+  <Stack direction={`column`} sx={{"border-radius": "xl", "width": "100%"}}>
+  <Text sx={{"size": "0.2em", "color": "#808080"}}>
+  {`Recorrido`}
+</Text>
+  <Button variant={`ghost`}>
+  {`Seguir`}
+</Button>
+</Stack>
+</HStack>
+  <HStack>
+  <Avatar size={`md`}/>
+  <Stack direction={`column`}>
+  <Text sx={{"size": "0.02em", "color": "#808080"}}>
+  {`Información de Reserva`}
+</Text>
+  <Text as={`b`} sx={{"margin-right": "70px", "size": "3em", "color": "back"}}>
+  {`Nombre Apellido`}
+</Text>
+</Stack>
+</HStack>
+</VStack>
 </VStack>
 </Box>
 </Box>
@@ -164,7 +222,7 @@ export default function Component() {
 </HStack>
   <NextHead>
   <title>
-  {`Menu`}
+  {`Inventario`}
 </title>
   <meta content={`A Reflex app.`} name={`description`}/>
   <meta content={`favicon.ico`} property={`og:image`}/>
